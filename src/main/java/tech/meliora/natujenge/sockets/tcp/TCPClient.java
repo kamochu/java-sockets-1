@@ -29,7 +29,7 @@ public class TCPClient {
         BufferedReader in = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 
         String message = "Hello Server!!";
-        out.println(message);
+        out.println(message); // slow... thread has to wait...
 
         System.out.println(LocalTime.now().toString() + "|" + Thread.currentThread().getName()
                 + "|sent message to server");

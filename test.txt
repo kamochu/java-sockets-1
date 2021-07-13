@@ -1,0 +1,3 @@
+Once you have read all the data, you need to clear the buffer,
+ to make it ready for writing again. 
+You can do this in two ways: By calling clear() or by calling compact(). 
