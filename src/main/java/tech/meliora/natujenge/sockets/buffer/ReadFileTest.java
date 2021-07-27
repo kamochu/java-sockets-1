@@ -6,13 +6,10 @@ import java.nio.channels.FileChannel;
 
 public class ReadFileTest {
 
-
     public static void main(String[] args) throws Exception {
-
 
         RandomAccessFile aFile = new RandomAccessFile("/home/sam/Documents/tech.meliora/repos/learning/natujenge/java-sockets-1/test.txt", "rw");
         FileChannel inChannel = aFile.getChannel();
-
 
         ByteBuffer buf = ByteBuffer.allocate(48);
 
@@ -28,6 +25,7 @@ public class ReadFileTest {
             buf.clear(); //make buffer ready for writing
             bytesRead = inChannel.read(buf);
         }
+
         aFile.close();
     }
 }
